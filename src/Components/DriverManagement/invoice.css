@@ -1,0 +1,49 @@
+
+.invoice-container {
+    max-width: 800px;
+    margin: 20px;
+    margin-left: 20vw;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .print-btn{
+    height: 5vh;
+    width: 8vw;
+    border: none;
+    background-color: rgb(9, 176, 241);
+    border-radius: 4px;
+    margin-left: 20vw;
+    cursor: pointer;
+  }
+  .invoice-header, .invoice-trips, .invoice-footer {
+    margin-bottom: 20px;
+  }
+  
+  .invoice-header h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .invoice-trip {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .invoice-trip p {
+    margin: 5px 0;
+  }
+  
+  .invoice-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+  

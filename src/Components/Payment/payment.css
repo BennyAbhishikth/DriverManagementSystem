@@ -1,0 +1,247 @@
+.pp-h-ad{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: rgb(230, 228, 228);
+    border: none;
+    margin: 10px;
+    margin-top: 8px;
+}
+.pp-h-ad-adn{
+    font-size: small;
+}
+.payments-head-admin{
+    display: flex;
+    /* gap: 1rem; */
+    line-height: 0.5;
+}
+.payments-admin-head{
+    display: flex;
+    box-shadow: 2px 2px 2px 2px rgb(229, 227, 227);
+    height: 9vh;
+    border-radius: 10px;
+    margin: 10px;
+}
+.payment-lists-head{
+    display: flex;
+    margin: 10px;
+}
+.payments-head-date{
+    display: flex;
+    margin-left: 59vw;
+}
+.l-arr-btn{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+.card1-date{
+    color: red;
+    margin: 10px;
+    margin-left: 4vw;
+    margin-top: 2vh;
+    position: absolute;
+}
+.reports-btn{
+    border-color: orange;
+    background-color: rgb(243, 239, 234);
+    color: orange;
+    margin: 10px;
+    border-radius: 10px;
+    height: 5vh;
+    width: 8vw;
+    position: absolute;
+    margin-left: 55vw;
+    border-style: solid;
+}
+.invoice-btn{
+    background-color: rgb(197, 197, 234);
+    border-color: blue;
+    color: blue;
+    margin: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    height: 5vh;
+    width: 8vw;
+    position: absolute;
+    margin-left: 64vw;
+    cursor: pointer;
+}
+.card1-ff{
+    display: flex;
+}
+.ven-img{
+    height: 45px;
+    width: 45px;
+}
+.vendor-img-btn{
+    height: 65px;
+    width: 65px;
+    border-radius: 32px;
+    border-color: rgb(243, 209, 60);
+    border-style: solid;
+    margin: 10px;
+}
+.view-pro-head{
+    font-size: smaller;
+    margin: 10px;
+    margin-top: 25px;
+    color: rgb(3, 174, 174);
+}
+.vendor-det{
+    display: flex;
+    height: 10vh;
+}
+.ven-name-prof{
+    display: flex;
+}
+.vvd{
+    display: flex;
+}
+.view-vend-det{
+    /* display: flex;
+    flex-direction: column; */
+    margin-left: 0vw;
+    line-height: 0.2;
+    margin-bottom: 7vh;
+}
+.view-id-h{
+    line-break: 0.1;
+    font-size: small;
+}
+.call-btn{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin: 5px;
+    border-style: solid;
+    border-color: rgb(79, 192, 236);
+    color: rgb(48, 184, 238);
+    background-color: rgb(241, 245, 247);
+}
+.msg-btn{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin: 5px;
+    border-style: solid;
+    border-color: rgb(79, 192, 236);
+    color: rgb(48, 184, 238);
+    background-color: rgb(241, 245, 247);
+}
+.tele-btn{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin: 5px;
+    border-style: solid;
+    border-color: rgb(79, 192, 236);
+    color: rgb(48, 184, 238);
+    background-color: rgb(241, 245, 247);
+}
+.not-btn{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin: 5px;
+    border-style: solid;
+    border-color: rgb(79, 192, 236);
+    color: rgb(48, 184, 238);
+    background-color: rgb(241, 245, 247);
+}
+.sym-icons{
+    margin: 10px;
+    /* margin-bottom: 20vh; */
+}
+.vendor-det-card{
+    box-shadow: 2px 2px 2px 2px white;
+    background-color: rgb(230, 241, 240);
+    color: rgb(89, 200, 241);
+    border: none;
+    height:12vh;
+    width: 10vw;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.ven-details-cards{
+    display: flex;
+}
+.card1{
+}
+.main-ven-card{
+    box-shadow: 2px 2px 2px 2px rgb(240, 239, 239);
+    margin: 10px;
+    width: 75vw;
+    position: relative;
+}
+.billing-card{
+    box-shadow: 2px 2px 2px 2px rgb(232, 230, 230);
+    width: 25vw;
+    height: 40vh;
+    border-radius: 15px;
+    margin: 10px;
+    position:relative;
+}
+.bill-mont{
+line-height: 0.1;
+margin: 10px;
+position: absolute;
+}
+.pay-status{
+    line-height: 0.1;   
+    margin: 10px;
+    position: absolute;
+    margin-left: 15vw;
+}
+.bil-date{
+    line-height: 0.1;
+    margin: 10px;
+    position: absolute;
+    margin-top: 10vh;
+}
+.due-date{
+    line-height: 0.1;
+    margin: 10px;
+    position: absolute;
+    margin-left: 15vw;
+    margin-top: 10vh;
+}
+.pay-now-btn{
+    height: 5vh;
+    width: 12vw;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    position: absolute;
+    margin-top: 15vw;
+    margin-left: 6vw;
+}
+.two-cards{
+    display: flex;
+}
+.tot-price{
+    position: absolute;
+    margin-top: 20vh;
+    line-height: 0.1;
+    margin-left: 1vw
+}
+.search-vendor{
+    height: 3vh;
+    width: 14vw;
+    margin: 10px;
+    border-radius: 10px;
+}
+.ride-status{
+    height: 4vh;
+    width: 8vw;
+    border-radius: 5px;
+    color: gray;
+}
+.payment-table{
+    border-radius: 20px;
+    /* margin: 10px; */
+}

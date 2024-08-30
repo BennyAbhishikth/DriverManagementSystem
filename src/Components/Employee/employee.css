@@ -1,0 +1,266 @@
+.mm-ff{
+    display: flex;
+    margin-left: 5vw;
+}
+.upl-emp-head{
+    color: white;
+    margin-left: 35vw;
+    box-shadow: 0px 0px 0px 0px rgb(241, 243, 241);
+    height: 5vh;
+    width: 8vw;
+    background-color: rgb(52, 95, 52);
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    padding-top: 0.5vh;
+}
+.employ-search-btn{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+.upload-excel{
+    
+    margin-top: 3.5vh;
+    margin-left: 30vwvw;
+    height: 4vh;
+    width: 7vw;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5vw;
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+.upload-excel:hover{
+    transform: scale(1.1);
+}
+.employ-head{
+   color: rgb(5, 120, 165);
+}
+.emp-dash-search{
+    height: 4vh;
+    width: 16vw;
+    border-radius: 4px;
+    margin-top: 4vh;
+    margin-left: 5vw;
+}
+.employ-search{
+    margin-top: 3vh;
+    margin-left: 1vw;
+    font-size:"larger"
+}
+.input-file-xl{
+    margin-top: 4.5vh;
+    margin-left: 35vw;
+}
+.search-input{
+    margin-left: 5vw;
+    margin-top: 4vh;
+}
+thead{
+    font-size: xx-large;
+    background-color: rgb(245, 237, 237);
+    border: 2px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    box-shadow: 1px 0px 1px 1px rgb(234, 232, 232);
+    width: 95vw;
+    margin-left: 2vw;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+  
+  }
+  .add-employee-button{
+    height: 6vh;
+    width: 10vw;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(79, 157, 185);
+    margin-top: 2.5vh;
+    margin-right: 4vw;
+  }
+ td {
+    text-align: left;
+    /* padding: 8px; */
+
+  }
+  th{
+    text-align: left;
+    padding: 8px;
+    position:sticky;
+    width: 100vw;
+  }
+
+  tr{
+    height: 7vh;
+    margin: 10px;
+    /* overflow-y: auto; */
+  }
+  tr:hover{
+    box-shadow: 1px 0px 1px rgb(165, 163, 163);
+
+    border-radius: 5px;
+  }
+  th{
+    font-size: small;
+  }
+  .serachhh{
+    font-size: larger;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  tr:nth-child(even) {
+    /* background-color: rgb(243, 246, 247); */
+  }  
+  .td-edit-btn{
+    height: 4vh;
+    width: 4vw;
+    background-color:rgb(220, 180, 77);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .edit-del-btns{
+    display: flex;
+    margin-right: 4vw;
+  }
+  .profile-preview{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+  }
+  .td-delete-btn{
+    height: 4vh;
+    width: 4vw;
+    background-color: rgb(216, 72, 72);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .td-save-btn{
+    height: 4vh;
+    width: 4vw;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .edit-input-field{
+    width: 8vw;
+    height: 4vh;
+    border-radius: 4px;
+  }
+  /* .add-employee-form{
+    box-shadow: 1px 1px 1px 1px rgb(229, 227, 227);
+    height: 38vh;
+    width: 75vw;
+    margin-left: 12vw;
+    border-radius: 10px;
+  } */
+  .close-form-btn{
+    margin-left: 73vw;
+    margin-top: 1.5vh;
+  }
+  /* .add-employee-input{
+    height: 4vh;
+    width: 10vw;
+    border-radius: 4px;
+    margin: 10px;
+    padding-left: 10px;
+  } */
+ /* .add-employee-save-btn{
+  height: 4vh;
+  width: 6vw;
+  background-color: green;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  margin-top: 2vh;
+  margin-left: 30vw;
+ } */
+ /* .add-employee-cancel-btn{
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  height: 4vh;
+  width: 6vw;
+  margin: 10px;
+ } */
+ /* .add-employee-head{
+  margin-left: 2vw;
+ } */
+ .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup form styles */
+.add-employee-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close-form-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.add-employee-head {
+  margin-top: 0;
+}
+
+.add-employee-input {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.add-employee-save-btn, .add-employee-cancel-btn {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-employee-save-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.add-employee-cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
