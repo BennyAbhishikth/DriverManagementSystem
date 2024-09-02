@@ -43,8 +43,8 @@ table {
     height: 7vh;
     margin: 10px;
     overflow-y: auto;
-    border: 1px;
-    border-style: solid;
+    /* border: 1px; */
+    /* border-style: solid; */
     /* table-layout:initial; */
 
 

@@ -1,0 +1,86 @@
+
+
+.driver-form-details-m {
+    /* max-width: 600px; */
+    width: 40vw;
+    /* height: 50vh; */
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .driver-form-details-m label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .driver-form-details-m input,
+  .driver-form-details-m select {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    margin-left: 3.5vw;
+  }
+  
+  .driver-form-details-m input[type="file"] {
+    padding: 3px;
+  }
+  
+  .driver-form-details-m .dr-submitm {
+    width: 60%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 8vw;
+  }
+  
+  .driver-form-details-m .dr-submitm:hover {
+    background-color: #0056b3;
+  }
+  
+  .driver-form-details-m .l-namem,
+  .driver-form-details-m .l-emailm,
+  .driver-form-details-m .l-mobm,
+  .driver-form-details-m .l-genm,
+  .driver-form-details-m .l-dobm,
+  .driver-form-details-m .l-agem,
+  .driver-form-details-m .l-addressm,
+  .driver-form-details-m .l-licm,
+  .driver-form-details-m .l-panm,
+  .driver-form-details-m .l-aadharm,
+  .driver-form-details-m .l-expm,
+  .driver-form-details-m .l-imgm {
+    margin-bottom: 5px;
+    margin-left: 3vw;
+  }
+  
+  .driver-form-details-m img {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .driver-form-details-m a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .driver-form-details-m a:hover {
+    text-decoration: underline;
+  }
+  

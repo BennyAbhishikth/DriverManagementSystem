@@ -1,34 +1,55 @@
 .admin-prof-btn{
     height: 40px;
     width: 40px;
-    border-radius: 20px;
+    border-radius: 25px;
     margin: 10px;
+    border-style: solid;
 }
 .admin-prof{
     display: flex;
     padding-left: 50px;
+    position: absolute;
+    margin-left: 83vw;
+}
+.dr-time{
+    position: absolute;
+    margin-left: 55vw;
 }
 .admin-head{
     display: flex;
     margin: 10px;
-    box-shadow: 2px 2px 2px 2px rgb(239, 237, 237);
+    box-shadow: 0px 0px 0px 0px rgb(251, 248, 248);
     border-radius: 10px;
+    position: relative;
+    height: 8.5vh;
+    border-color: rgb(239, 233, 233);
+    border-width: 0.01px;
+    border-style: solid;
 }
 .admin-dr-nav{
     display: flex;
-    gap: 40rem;
+   
+}
+.bold-driver-id{
+    color: black;
+    font-size: large;
 }
 .dr-mng{
     margin: 10px;
+    color: #7d7d7d;
+    position: absolute;
+    padding-top: 5px;
 }
+
 .doc-up-date{
-    box-shadow: 2px 0px 2px 0px rgb(232, 228, 228);
+    box-shadow: 0px 0px 0px 0px rgb(255, 255, 255);
     height: 5vh;
     width: 15vw;
     border-radius: 20px;
     padding-left: 10px;
     padding-top: 5px;
-    background-color: rgb(13, 200, 13);
+    color: #fcfdfd;
+    background-color: #007857;
     }
     .update-det{
         display: flex;
@@ -62,9 +83,9 @@
         border-style: solid;
         position: absolute;
         margin-left: 88vw;
-        color: orange;
-        background-color: rgb(239, 235, 229);
-        border-color: orange;
+        color: #ff7043;
+        background-color: #fff4f0;
+        border-color: #ff7f56;
         cursor: pointer;
     }
     .delete-btn{
@@ -73,10 +94,10 @@
         margin: 10px;
         margin-top:1.5vh;
         border-radius: 5px;
+        border-color: #e60c24;
+        background-color: #fff3f5;
         border-color: red;
-        background-color: rgb(244, 239, 239);
-        border-color: red;
-        color: red;
+        color: #e5031c;
         margin-left: 91vw;
         position: absolute;
     }
@@ -124,6 +145,7 @@
         position: absolute;
         margin-top: 12vh;
         margin-left: 5vw;
+        color: #3ab4c3;
     }
     .driver-name-head{
         position: absolute;
@@ -156,101 +178,113 @@
     .dr-only{
         position: absolute;
         border-style: solid;
-        border-color: #988ac0;
+        border-color: #7f6dae;
         background-color: #f2ecff;
-        color: #816fb0;
+        color: #6a56a0;
         height: 4vh;
-        width: 8vw;
+        width: 10vw;
         text-align: center;
         border-radius: 4px;
         border-width: 2px;
         margin-top: 20vh;
-        margin-left: 15vw;
-   
+        margin-left: 12vw;
+        padding-top: 5px;
 
     }
     .dr-Fleet{
         position: absolute;
         border-style: solid;
-        border-color: rgb(82, 241, 8);
-        background-color: rgb(236, 228, 236);
-        color: rgb(125, 246, 5);
+        border-color: #6aab70;
+        background-color: #e4fee2;
+        color: #5aa260;
         height: 4vh;
-        width: 8vw;
+        width: 6vw;
         text-align: center;
         border-radius: 10px;
         margin-top: 20vh;
-        margin-left: 25vw;
+        margin-left: 23vw;
         border-radius: 4px;
+        padding-top: 5px;
         border-width: 2px;
+    }
+    *{
+        font-style:normal;
     }
     .dr-of-rides{
         position: absolute;
         border-style: solid;
-        border-color: rgb(45, 82, 1);
-        background-color: rgb(248, 251, 247);
-        color: rgb(15, 97, 2);
+        border-color:  #9b9f71;
+        background-color:#f9fbe7 ;
+        color: #898e5b;
         height: 4vh;
-        width: 8vw;
+        width: 10vw;
         text-align: center;
         border-radius: 10px;
         margin-top: 20vh;
-        margin-left: 35vw;
+        margin-left: 30vw;
         border-radius: 4px;
         border-width: 2px;
+        padding-top: 5px;
     }
     .dr-traveles{
         position: absolute;
         border-style: solid;
-        border-color: rgb(205, 6, 132);
-        background-color: rgb(251, 245, 248);
-        color: rgb(231, 11, 132);
+        border-color: #9f719a;
+        background-color: #fbe7f6;
+        color: #92608d;
         height: 4vh;
         width: 8vw;
         text-align: center;
         border-radius: 10px;
         margin-top: 20vh;
-        margin-left: 45vw;
+        margin-left: 41vw;
         border-radius: 4px;
         border-width: 2px;
+        padding-top: 5px;
     }
     .dr-org{
         position: absolute;
         border-style: solid;
-        border-color: rgb(232, 137, 5);
-        background-color: rgb(246, 244, 241);
-        color: rgb(232, 137, 5);
+        border-color: #a86c0b;
+        background-color: #fff2de;
+        color: #b27b23;
         height: 4vh;
-        width: 8vw;
+        width: 6vw;
         text-align: center;
         border-radius: 10px;
         margin-top: 20vh;
-        margin-left: 55vw;
+        margin-left: 50vw;
         border-radius: 4px;
         border-width: 2px;
+        padding-top: 5px;
     }
     .dr-based-pay{
         position: absolute;
         border-style: solid;
-        border-color: rgb(4, 29, 248);
-        background-color: rgb(247, 248, 251);
-        color: rgb(4, 29, 248);
+        border-color: #3232b5;
+        background-color: #e5e5f5;
+        color: #1c1cae;
         height: 4vh;
-        width: 12vw;
+        width: 10vw;
         text-align: center;
         border-radius: 10px;
         margin-top: 20vh;
-        margin-left: 65vw;
+        margin-left: 57vw;
         border-radius: 4px;
         border-width: 2px;
+        padding-top: 5px;
     }
 
     .tot-card{
-       box-shadow: 2px 2px 2px 2px rgb(234, 228, 228);
+       box-shadow: 0px 0px 0px 0px rgb(245, 244, 244);
+       border-color: rgb(239, 233, 233);
+       border-width: 0.01px;
+       border-style: solid;
        height: 45vh;
        border-radius: 10px;
        margin: 10px;
        position : relative;
+       margin-bottom: 5vh;
     }
     .cms-btn{
         height: 35px;
@@ -266,65 +300,78 @@
     .dr-detail-cards{
         position: absolute;
         display: flex;
-        margin-top: 25vh;
+        margin-top: 26vh;
     }
     .dr-details-card{
         box-shadow: 2px 2px 2px 2px white;
         background-color: #e0f7fa;
         width: 9vw;
-        height: fit-content;
+        height: 14vh;
+        line-height: 0.6;
         margin: 10px;
         border-radius: 10px;
         text-align: center;
-        color: rgb(99,184,193);
+        color: #289aa7;
+      
+    }
+    .dr-details-card-value{
+     
+    }
+    .dr-details-card-head{
+        color:#828585;
+        font-size: large;
     }
     .caller-btn{
         height: 30px;
         width: 30px;
         border-radius: 20px;
         border-style: solid;
-        background-color: rgb(231, 240, 243);
-        color: rgb(12, 163, 222) ;
-        border-color: rgb(27, 170, 226);
+        background-color: white;
+        color: rgb(0,147,255) ;
+        border-color: rgb(0,147,255);
         position: absolute;
         margin-top: 20vh;
         margin-left: 1vw;
+        padding-top: 5px;
     }
     .telegram-btn{
         height: 30px;
         width: 30px;
         border-radius: 20px;
         border-style: solid;
-        background-color: rgb(231, 240, 243);
-        color: rgb(12, 163, 222) ;
-        border-color: rgb(27, 170, 226);
+        background-color: white;
+        color: rgb(0,147,255) ;
+        border-color: rgb(0,147,255);
         position: absolute;
         margin-top: 20vh;
         margin-left: 6vw;
+        padding-top: 5px;
     }
     .notification-btn{
         height: 30px;
         width: 30px;
         border-radius: 20px;
         border-style: solid;
-        background-color: rgb(231, 240, 243);
-        color: rgb(12, 163, 222) ;
-        border-color: rgb(27, 170, 226);
+        background-color: white;
+        color: rgb(0,147,255) ;
+        border-color: rgb(0,147,255);
         position: absolute;
         margin-top: 20vh;
         margin-left: 8.5vw;
+        padding-top: 5px;
     }
     .message-btn{
         height: 30px;
         width: 30px;
         border-radius: 20px;
         border-style: solid;
-        background-color: rgb(231, 240, 243);
-        color: rgb(12, 163, 222) ;
-        border-color: rgb(27, 170, 226);
+        color: rgb(0,147,255) ;
+        border-color: rgb(0,147,255);
+        background-color: white;
         position: absolute;
         margin-top: 20vh;
         margin-left: 3.5vw;
+        padding-top: 5px;
     }
     .card-dr1{
         box-shadow: 2px 2px 2px 2px rgb(250, 249, 249);
@@ -399,11 +446,16 @@
         border-style: solid;
         border-color: black;
         border-width: 1px;
-        height: 95vh;
+        height: 90vh;
         margin: 10px;
-        width: 30vw;
-        border-radius: 20px;
-        margin-left: 35vw;
+        border: none;
+        width: 85vw;
+        background-color: rgb(238, 245, 248);
+        border-radius: 10px;
+        margin-left: 7.5vw;
+        margin-top: 5vh;
+       display: flex;
+justify-content: space-between;
     }
     .l-name{
         padding-left: 10px;
@@ -413,6 +465,7 @@
     }
     .l-email{
         padding-left: 10px;
+        /* margin-left: 10 vw; */
     }
     .l-mob{
         padding-left: 10px;
@@ -439,84 +492,95 @@
         padding-left: 10px;
     }
     .dr-name{
-        height: 4vh;
-        width: 15vw;
-        margin: 10px;
-        border-radius: 10px;
-        margin-left: 5vw;
-    }
-    .dr-email{
-        height: 4vh;
-        width: 15vw;
-        margin: 10px;
-        border-radius: 10px;
-        margin-left: 5vw;
-    }
-    .dr-mob{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
         border-radius: 10px;
         /* margin-left: 5vw; */
+        border: none;
+    }
+    .dr-email{
+        height: 5vh;
+        width: 16vw;
+        margin: 10px;
+        border-radius: 10px;
+        /* margin-left: 5vw; */
+        border: none;
+    }
+    .dr-mob{
+        height: 5vh;
+        width: 16vw;
+        margin: 10px;
+        border-radius: 10px;
+        /* margin-left: 5vw; */
+        border: none;
     }
     .dr-gen{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
         border-radius: 10px;
-        margin-left: 5vw;
+        /* margin-left: 5vw; */
+        border: none;
     }
     .dr-dob{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
         border-radius: 10px;
-        margin-left: 6vw;
+        /* margin-left: 6vw; */
+        border: none;
     }
     .dr-age{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
         border-radius: 10px;
-        margin-left: 6vw;
+        /* margin-left: 6vw; */
+        border: none;
     }
     .dr-address{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
         border-radius: 10px;
-        margin-left: 4vw;
+        /* margin-left: 4vw; */
+        border: none;
     }
     .dr-lic{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
         border-radius: 10px;
-        margin-left: 5vw;
+        /* margin-left: 5vw; */
+        border: none;
     }
     .dr-aadhar{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
         border-radius: 10px;
-        margin-left: 3vw;
+        /* margin-left: 3vw; */
+        border: none;
     }
     .l-aadhar{
         margin: 10px;
     }
     .dr-pan{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
         border-radius: 10px;
-        margin-left: 2vw;
+        /* margin-left: 2vw; */
+        border: none;
     }
     .dr-exp{
-        height: 4vh;
-        width: 15vw;
+        height: 5vh;
+        width: 16vw;
         margin: 10px;
-        margin-left: 3vw;
+        /* margin-left: 3vw; */
         border-radius: 10px;
+        border: none;
     }
     /* .dr-img{
         height: 4vh;
@@ -534,9 +598,19 @@
         background-color: rgb(95, 184, 232);
         cursor: pointer;
     }
+    .inf-pers-view{
+        color: #21abbc;
+        padding-top: 5px;
+    }
+    .inf-pers-view-veh{
+        color: #21abbc;
+        padding-top: 10px;
+        margin-left: 0.5vw;
+    }
     .dr-pd{
         height: 4vh;
         border: none;
+        font-size: large;
         border-radius: 10px;
         /* background-color: rgb(246, 173, 39); */
         margin: 10px;
@@ -544,6 +618,7 @@
     }
     .dr-lt{
         height: 4vh;
+        font-size: large;
         border: none;
         border-radius: 10px;
         /* background-color: rgb(246, 173, 39); */
@@ -551,10 +626,14 @@
         cursor: pointer;
     }
     .dr-lt:hover{
-        background-color: rgb(132, 206, 244);
+        /* background-color: rgb(132, 206, 244); */
+        background-color: #21abbc;
+        border-radius: 4px;
+        color: #e0f3f5;
     }
     .dr-th{
         height: 4vh;
+        font-size: large;
         border: none;
         border-radius: 10px;
         /* background-color: rgb(246, 173, 39); */
@@ -562,21 +641,29 @@
         cursor: pointer;
     }
     .dr-th:hover{
-        background-color: rgb(132, 206, 244);
+        /* background-color: rgb(132, 206, 244); */
+        background-color: #21abbc;
+        border-radius: 4px;
+        color: #e0f3f5;
     }
     .dr-vd{
         height: 4vh;
         border: none;
+        font-size: large;
         border-radius: 10px;
         /* background-color: rgb(246, 173, 39); */
         margin: 10px;
         cursor: pointer;
     }
     .dr-vd:hover{
-        background-color: rgb(132, 206, 244);
+        /* background-color: rgb(132, 206, 244); */
+        background-color: #21abbc;
+        border-radius: 4px;
+        color: #e0f3f5;
     }
     .dr-cf{
         height: 4vh;
+        font-size: large;
         border: none;
         border-radius: 10px;
         /* background-color: rgb(246, 173, 39); */
@@ -584,44 +671,52 @@
         cursor: pointer;
     }
     .dr-cf:hover{
-        background-color: rgb(132, 206, 244);
+        /* background-color: rgb(132, 206, 244); */
+        background-color: #21abbc;
+        border-radius: 4px;
+        color: #e0f3f5;
     }
     .dr-pd:hover{
-        background-color: rgb(132, 206, 244);
+        background-color: #21abbc;
+        border-radius: 4px;
+        color: #e0f3f5;
     }
     .dr-btns{
-        margin-left: 5vw;
-        box-shadow: 2px 2px 2px 2px white;
-        background-color: rgb(240, 244, 246);
-        color: rgb(10, 174, 239);
-        border-radius: 20px;
+        margin-top: 10vh;
+        box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+        background-color: #e9ecef;
+        /* color: rgb(10, 174, 239); */
+        border-radius: 8px;
         width: 60vw;
+        margin: 10px;
     }
     .information{
-        box-shadow: 2px 2px 2px 2px rgb(240, 237, 237);
+        box-shadow: 0px 0px 0px 0px rgb(250, 249, 249);
         border-radius: 10px;
-        margin: 20px;
-        height: 35vh;
-        /* width: fit-content; */
-        position: relative;
-        
+        margin: 10px;
+        margin-top: 5vh;
+        height: 32.5vh;
+        line-height: 0.01;    
+        border-color: rgb(239, 233, 233);
+        border-width: 0.01px;
+        border-style: solid;
     }
     .inf-pers{
-        /* display: flex;
-        flex-wrap: wrap; */
-        /* gap: 2rem;  */
         margin: 10px;
     }
     .cur-car-img{
         height: 30vh;
         width: 15vw;
-        margin-left: 4vw;
+        margin-left: 2vw;
     }
     .curr-ass-veh{
-        height: 40vh;
+        height: 52vh;
         border-radius: 10px;
-        box-shadow: 2px 2px 2px 2px rgb(233, 231, 228);
+        box-shadow: 0px 0px 0px 0px rgb(250, 249, 248);
         margin: 10px;
+        border-color: rgb(239, 233, 233);
+        border-width: 0.01px;
+        border-style: solid;
         position: relative;
     }
     .view-veh-detail{
@@ -644,27 +739,28 @@
     .cur-det{
         display: flex;
         flex-wrap: wrap;
-        margin-right: 5vw;
+        margin-right: 1vw;
+        /* justify-content: space-evenly; */
     }
     .veh-num-cras{
         position: absolute;
-        margin-left: 20vw ;
-        margin-top: 7vh;
+        margin-left: 12vw ;
+        margin-top: 8vh;
     }
     .vehicle-brande-img{
         position: absolute;
         height: 12vh;
-        margin-left: 20vw;
+        margin-left: 12vw;
     }
     .veh-model{
         position: absolute;
-        margin-top: 11vh;
-        margin-left: 20vw;
+        margin-top: 12vh;
+        margin-left: 12vw;
     }
     .view-veh-detail-cras{
         position: absolute;
-        margin-top: 7vh;
-        margin-left: 30vw;
+        margin-top: 8.5vh;
+        margin-left: 21vw;
         font-size: small;
         color: rgb(11, 167, 228);
         
@@ -677,69 +773,108 @@
     .view-veh-det{
         
     }
+    .car-brand-btn{
+        height: 40px;
+        width: 40px;
+        border-radius: 25px;
+        border: none;
+        background-color: rgb(240, 238, 238);
+    }
     .curr-dets{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        /* justify-content: space-evenly; */
         position: absolute;
-        margin-top: 14vh;
-        margin-left: 18vw;
+        margin-top: 15vh;
+        margin-left: 11vw;
     }
     .assg-client{
         position: absolute;
-        margin-left: 40vw;
+        margin-left: 38vw;
     }
     .assg-client-name{
         position: absolute;
-        margin-left: 40vw;
+        margin-left: 38vw;
         margin-top: 6vh;
     }
     .assg-loc{
         position: absolute;
-        margin-left: 50vw;
+        margin-left: 55vw;
     }
     .assg-route{
         position: absolute;
         margin-top: 6vh;
-        margin-left: 50vw;
+        margin-left: 55vw;
     }
     .assg-loc-chng{
         position: absolute;
         margin-top: 10vh;
-        margin-left: 50vw;
+        margin-left: 55vw;
         font-size: small;
         color: rgb(7, 177, 245);
     }
     .assg-client-chng{
         position: absolute;
-        margin-left: 40vw;
+        margin-left: 38vw;
         margin-top: 10vh;
         font-size: small;
         color: rgb(8, 184, 254);
     }
     .brand{
         margin: 20px;
+        display: flex;
+        line-height: 0.5;
+        align-items: center;
+        gap: 1rem;
     }
     .model{
         margin: 20px;
+        display: flex;
+        line-height: 0.5;
+        align-items: center;
+        gap: 1rem;
     }
     .regno{
         margin: 20px;
+        display: flex;
+        line-height: 0.5;
+        align-items: center;
+        gap: 1rem;
     }
     .color{
         margin: 20px;
+        display: flex;
+        line-height: 0.5;
+        align-items: center;
+        gap: 1rem;
     }
     .seatcp{
         margin: 20px;
+        display: flex;
+        line-height: 0.5;
+        align-items: center;
+        gap: 1rem;
     }
     .fueltype{
         margin: 20px;
+        display: flex;
+        line-height: 0.5;
+        align-items: center;
+        gap: 1rem;
     }
     .mil{
         margin: 20px;
+        display: flex;
+        line-height: 0.5;
+        align-items: center;
+        gap: 1rem;
     }
     .man-year{
         margin: 20px;
+        display: flex;
+        line-height: 0.5;
+        align-items: center;
+        gap: 1rem;
     }
     .inf-card-left{
         position: absolute;
@@ -777,36 +912,38 @@
     .act-inact{
         position: absolute;
         border-style: solid;
-        border-color: green;
-        background-color: rgb(229, 240, 229);
-        color: green;
-        height: 4vh;
-        width: 6vw;
-        border-radius: 10px;
+        border-color: #37b55d;
+        background-color: #deffe8;
+        color: #049f32;
+        height: 3vh;
+        width: 5vw;
+        border-width: 2px;
+        /* border: 5px; */
+        border-radius: 6px;
         margin-left: 81vw;
         margin-top: 1.5vh;
+        text-align: center;
+        padding-top: 5px;
     }
     .mob-sym-btn{
         font-size: small;
         box-shadow: 2px 0px 2px 0px rgb(237, 232, 232);
-        height: 30px;
-        width: 30px;
-        border-radius:20px ;
+        height: 40px;
+        width: 40px;
+        border-radius:25px ;
         border: none;
     }
-    .mob-infs, .mob-infs{
+    .mob-inf-det{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        /* justify-content: space-around; */
         align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
+        gap: 1rem;
     }
     .mob-infss{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 2rem;
+        gap: 2.5rem;
+        /* padding-bottom: 10px; */
     }
     .phone-num-h{
         line-height: 0.2;
