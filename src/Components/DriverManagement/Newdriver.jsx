@@ -64,14 +64,16 @@
 // )
 // }
 // export default Newdriver;
-import { useLocation, useNavigate } from "react-router-dom";
+
+
+// import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./driver.css";
 import axios from 'axios';
 import { useEffect } from "react";
 
 function Newdriver() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // State variables for form fields and errors
   const [name, setName] = useState("");
@@ -84,11 +86,24 @@ function Newdriver() {
   const [aadhar, setAadhar] = useState("");
   const [pan, setPan] = useState("");
   const [lic, setLic] = useState("");
+  const [exp, setExp] = useState("");
+  const [vehicleId , setVehicleId] = useState("")
+
+
   const [data, setData] = useState([]); 
   const [profileImages, setProfileImages] = useState({});
   // State variables for error messages
   const [errors, setErrors] = useState({});
   const [imageUrl, setImageUrl] = useState('');
+
+  const generateRandomId = (length = 8) => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+  };
 
 
   // Validation function
@@ -167,6 +182,8 @@ useEffect(() => {
             // Get the image URL from the response
             const imageUrl = response.data.secure_url;
 
+            setImageUrl(imageUrl)
+
             // Update the profile image state with the Cloudinary URL
             setProfileImages(prevImages => ({ ...prevImages, [rowIndex]: imageUrl }));
         } catch (error) {
@@ -178,8 +195,13 @@ useEffect(() => {
 };
 
   const handleSubmit = () => {
+
+   let  driverId = generateRandomId()
+   console.log(driverId)
+
     if (validate()) {
       console.log({
+        driverId,
         name,
         mobile,
         email,
@@ -189,22 +211,34 @@ useEffect(() => {
         address,
         aadhar,
         pan,
-        lic
+        lic,
+        exp,
+        imageUrl,
+        vehicleId
       });
-      navigate("/viewdrivers", {
-        state: {
-          name,
-          mobile,
-          email,
-          gender,
-          age,
-          dob,
-          address,
-          aadhar,
-          pan,
-          lic
-        }
-      });
+      // navigate("/viewdrivers", {
+      //   state: {
+      //     name,
+      //     mobile,
+      //     email,
+      //     gender,
+      //     age,
+      //     dob,
+      //     address,
+      //     aadhar,
+      //     pan,
+      //     lic
+      //   }
+      // });
+
+      axios.post("https://silent-wave-76445.pktriot.net/addDriver",{driverId,name,mobile,email,gender,age,dob,address,aadhar,pan,lic,exp,imageUrl,vehicleId})
+      .then((result) => {
+        console.log(result.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+
     }
   };
   // const location = useLocation();
@@ -314,7 +348,11 @@ useEffect(() => {
       <br />
 
       <label className="l-exp">Experience</label>
-      <input className="dr-exp" type="number" />
+      <input className="dr-exp" type="number" onChange={(e) => setExp(e.target.value)}/>
+      <br />
+
+      <label className="l-exp">Vehicle Id</label>
+      <input className="dr-exp" type="text" onChange={(e) => setVehicleId(e.target.value)}/>
       <br />
 
       <label className="l-img">Image</label>
@@ -322,6 +360,7 @@ useEffect(() => {
       {imageUrl && <img src={imageUrl} alt="Uploaded" />}
 
       <br />
+  
 
       <button onClick={()=>handleSubmit()} className="dr-submit" >
         Submit
