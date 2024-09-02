@@ -1,8 +1,10 @@
 import "./driver.css"
 import { IoCall } from "react-icons/io5";
+import { MdAirlineSeatReclineExtra } from "react-icons/md";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { FaChevronLeft } from "react-icons/fa6";
+import { MdOutlineLocalTaxi } from "react-icons/md";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
@@ -10,6 +12,7 @@ import { MdOutlineMessage } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { TiTick } from "react-icons/ti";
+import { LuFuel } from "react-icons/lu";
 import { FaStar } from "react-icons/fa";
 import { useState } from "react";
 import { TiUser } from "react-icons/ti";
@@ -20,6 +23,9 @@ import { CiCalendarDate } from "react-icons/ci";
 import { FaAddressCard } from "react-icons/fa";
 import { PiClockAfternoon } from "react-icons/pi";
 import { FaLocationDot } from "react-icons/fa6";
+import { CiCalendar } from "react-icons/ci";
+import { FaBrush } from "react-icons/fa";
+
 import { useLocation, useNavigate } from "react-router-dom";
 function Driverprad(){
     const d = Date();
@@ -117,20 +123,7 @@ function Driverprad(){
             icon:<FaAddressCard />
            },
     ]
-    // const vehinf=[
-    //     {
-    //         Brand:"",
-    //         Model:"",
-    //         VehicleType:"",
-    //         Regno:"",
-    //         Color:"",
-    //         Seatcap:"",
-    //         Fueltype:"",
-    //         Mileagerange:"",
-    //         ManufacturedYear:""
-    //     }
-    // ]
-    // const location = useLocation();
+    
    
  return(
     <div>
@@ -138,12 +131,12 @@ function Driverprad(){
 
         <div className="admin-head">
             <div className="admin-dr-nav">
-            <p className="dr-mng">Driver Mangement/Id: xxxxx</p>
-            <p>{d}</p>
+            <p className="dr-mng">Driver Mangement&nbsp;/&nbsp;All Drivers&nbsp;/&nbsp;<b className="bold-driver-id">xxxxxx</b></p>
+            <p className="dr-time">{d}</p>
             </div>
             <div className="admin-prof">
             <h3 >AdminName</h3>
-            <button className="admin-prof-btn"></button>
+            <img className="admin-prof-btn" alt=""/>
             </div>
         </div>
         <div className="tot-card">
@@ -152,10 +145,11 @@ function Driverprad(){
             <TiTick className="tick"  />
             <h4 className="doc-up" >All Documents are upto date</h4>
             </div>
-            <select className="act-inact">
-                <option>Active</option>
-                <option>InActive</option>
-                </select>
+            {/* <select className="act-inact"> */}
+                <option className="act-inact">Active</option>
+                
+                {/* </select> */}
+
                 <button className="edit-btn"><MdOutlineEdit /></button>
                 <button className="delete-btn"><MdDelete /></button>
                 <img className="driver-image" src="https://res.cloudinary.com/dyxhiuuxa/image/upload/v1724665401/profiledriver_m3kcmd.png" alt="l" />
@@ -176,8 +170,8 @@ function Driverprad(){
                 <div className="dr-detail-cards">
                     {drdetails.map((item,key)=>(
                         <li className="dr-details-card" key={key}>
-                            <h6>{item.val}</h6>
-                          <h5>{item.title}</h5>
+                            <h2 className="dr-details-card-value">{item.val}</h2>
+                          <h5 className="dr-details-card-head">{item.title}</h5>
                         </li>
                     ))}
                 </div>
@@ -192,18 +186,21 @@ function Driverprad(){
             {viewPersonalDetails&&(
         <div className="information">
                  <div className="inf-pers">
-                 <h4><u>Personal Information</u></h4>
+                 <h4 className="inf-pers-view"><u>Personal Information</u></h4>
                  <h3><TiUser />&nbsp;&nbsp;Driver Name</h3>
                  <div className="mob-infss">
                  {fun.map((item,key)=>(
                     <div className="mob-infs">
-                        
+                      
+                        <div className="mob-inf-det">
+                              
                         <div className="mob-symm">
                           <button className="mob-sym-btn"><icon />{item.icon}</button>
                         </div>
-                        <div className="mob-inf-det">
+                        <div className="details-driver-card">
                            <p className="phone-num-h">{item.title}</p>
-                           <p className="phone-num">{item.value}</p>
+                           <p className="phone-num"><b>{item.value}</b></p>
+                           </div>
                         </div>
                     </div>
                  ))}
@@ -225,7 +222,7 @@ function Driverprad(){
                     </div>
                )}     
         <div className="curr-ass-veh">
-            <h4><u>Currently Assigned Vehicle</u></h4>
+            <h4 className="inf-pers-view-veh"><u>Currently Assigned Vehicle</u></h4>
             <div className="cur-det">
                 <div className="cur-car-det-c">
                 <img className="cur-car-img" src="https://res.cloudinary.com/dyxhiuuxa/image/upload/v1724421684/wrweuthrgturh6b7dqf1.png" alt="ff"/>
@@ -246,36 +243,79 @@ function Driverprad(){
                 
                 <div className="curr-dets">
                     <div className="brand">
-                    <p >Brand</p>
-            <p>value</p>
-
+                        <div>
+                       <button className="car-brand-btn"><MdOutlineLocalTaxi  /></button> 
+                        </div>
+                        <div>
+                        <p >Brand</p>
+                        <p>value</p>
+                        </div>
                     </div>
          <div className="model"> 
-            <p >Model</p>
-            <p>value</p>
+         <div>
+                       <button className="car-brand-btn"><MdOutlineLocalTaxi  /></button> 
+                        </div>
+                        <div>
+                        <p >Model</p>
+                        <p>value</p>
+                        </div>
             </div>
-            <div className="color"><p>Color</p>
-            <p>value</p>
+            <div className="color">
+            <div>
+                       <button className="car-brand-btn"><FaBrush  /></button> 
+                        </div>
+                        <div>
+                        <p>Color</p>
+                        <p>value</p>
+                        </div>
+                        
             </div>
             <div className="regno">
-            <p >Registration Num</p>
-            <p>value</p>
+            <div>
+                       <button className="car-brand-btn"><MdOutlineLocalTaxi  /></button> 
+                        </div>
+                        <div>
+                        <p >Registration Num</p>
+                        <p>value</p>
+                        </div>
+            
             </div>
+
             <div className="seatcp">
+            <div>
+                       <button className="car-brand-btn"><MdAirlineSeatReclineExtra  /></button> 
+                        </div>
+            <div>
             <p>Seat Capacity</p>
             <p>value</p>
             </div>
+            </div>
             <div className="fueltype">
-            <p>Fuel Type</p>
-            <p>value</p>
+            <div>
+                       <button className="car-brand-btn"><LuFuel  /></button> 
+                        </div>
+           <div>
+           <p>Fuel Type</p>
+           <p>value</p>
+           </div>
             </div>
             <div className="mil">
+            <div>
+                       <button className="car-brand-btn"><MdOutlineLocalTaxi  /></button> 
+                        </div>
+            <div>
             <p >Mileage</p>
             <p>value</p>
             </div>
+            </div>
             <div className="man-year">
-            <p>Manufacture Year</p>
-            <p>value</p>
+            <div>
+                       <button className="car-brand-btn"><CiCalendar  /></button> 
+                        </div>
+                        <div>
+                        <p>Manufacture Year</p>
+                        <p>value</p>
+                        </div>
             </div>
             </div>
                 </div>
