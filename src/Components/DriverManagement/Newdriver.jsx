@@ -1,9 +1,377 @@
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import "./newdriver.css";
-=======
+// // import { useNavigate } from "react-router-dom";
+// // import { useState } from "react";
+// // import "./driver.css"
+// // function Newdriver(){
+// //     const navigate = useNavigate();
+// //     const handlesubmit=()=>{
+// //        navigate("/viewdrivers")
+// //     }
+// //     const [name,setName] = useState();
+// //     const [mobile,setMobile] = useState();
+// //     const [email,setEmail] = useState();
+// //     const [gender,setGender] = useState();
+// //     const [age,setAge] = useState();
+// //     const [dob,setDob] = useState();
+// //     const [address,setAddress] = useState();
+// //     const [aadhar,setAadhar] = useState();
+// //     const [pan,setPan] = useState();
+// //     const [lic,setLic] = useState();
+
+// //     console.log(name);
+// //     console.log(mobile);
+// //     console.log(email);
+// //     console.log(gender);
+// //     console.log(age);
+// //     console.log(dob);
+// //     console.log(address);
+// //     console.log(aadhar);
+// //     console.log(pan);
+// //     console.log(lic);
+
+// // return(
+// //     <div className="driver-form-details">
+// //         <label className="l-name">Name</label>
+// //     <input value={name} onChange={(e)=>setName(e.target.value)} className="dr-name" type="text" /><br/>
+    
+// //     <label className="l-email">E-mail</label>
+// //     <input value={email} onChange={(e)=>setEmail(e.target.value)} className="dr-email" type="text" /><br/>
+// //     <label className="l-mob">Mobile Number</label>
+// //     <input value={mobile} onChange={(e)=>setMobile(e.target.value)} className="dr-mob" type="Number" pattern="[6789][0-9]{9}" /><br/>
+// //     <label className="l-gen">Gender</label>
+// //     <select value={gender} onChange={(e)=>setGender(e.target.value)} className="dr-gen">
+// //         <option>Male</option>
+// //         <option>Female</option>
+// //     </select><br/>
+// //     <label className="l-dob" >DOB</label>
+// //     <input value={dob} onChange={(e)=>setDob(e.target.value)} className="dr-dob" type="date" /><br/>
+// //     <label className="l-age">Age</label>
+// //     <input value={age} onChange={(e)=> setAge(e.target.value)} className="dr-age" type="Number" /><br/>
+// //     <label className="l-address">Address</label>
+// //     <input value={address} onChange={(e)=>setAddress(e.target.value)} className="dr-address" type="text" /><br/>
+// //     <label className="l-lic">LIC.No</label>
+// //     <input value={lic} onChange={(e)=>setLic(e.target.value)} className="dr-lic" type="Number" /><br/>
+// //     <label className="l-pan">PAN Card No</label>
+// //     <input value={pan} onChange={(e)=>setPan(e.target.value)} className="dr-pan" type="Number" /><br/>
+// //     <label className="l-aadhar">Aadhar No</label>
+// //     <input type="text" value={aadhar} onChange={(e)=>setAadhar(e.target.value)} className="dr-aadhar" /><br/>
+// //     <label className="l-exp">Experience</label>
+// //     <input  className="dr-exp" type="Number"/><br/>
+// //     <label className="l-img">Image</label>
+// //     <input className="dr-img" type="file" /><br/>
+// //     <button onClick={handlesubmit} className="dr-submit">Submit</button>
+// //         </div>
+        
+// // )
+// // }
+// // export default Newdriver;
+
+
+// // import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
+// import "./newdriver.css";
+// import axios from 'axios';
+// import { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+
+// function Newdriver() {
+//   // const navigate = useNavigate();
+
+//   // State variables for form fields and errors
+//   const [name, setName] = useState("");
+//   const [mobile, setMobile] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [gender, setGender] = useState("");
+//   const [age, setAge] = useState("");
+//   const [dob, setDob] = useState("");
+//   const [address, setAddress] = useState("");
+//   const [aadhar, setAadhar] = useState("");
+//   const [pan, setPan] = useState("");
+//   const [lic, setLic] = useState("");
+//   const [exp, setExp] = useState("");
+//   const [vehicleId , setVehicleId] = useState("")
+
+
+//   const [data, setData] = useState([]); 
+//   const [profileImages, setProfileImages] = useState({});
+//   // State variables for error messages
+//   const [errors, setErrors] = useState({});
+//   const [imageUrl, setImageUrl] = useState('');
+
+//   const generateRandomId = (length = 8) => {
+//     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//     let result = '';
+//     for (let i = 0; i < length; i++) {
+//       result += characters.charAt(Math.floor(Math.random() * characters.length));
+//     }
+//     return result;
+//   };
+
+
+//   // Validation function
+//   useEffect(() => {
+//     // const savedData = localStorage.getItem('excelData');
+//     const savedImages = localStorage.getItem('profileImages');
+//     // if (savedData) {
+//     //     const parsedData = JSON.parse(savedData);
+//     //     setData(parsedData);
+//     //     setFilteredData(parsedData);
+//     // }
+//     if (savedImages) {
+//         setProfileImages(JSON.parse(savedImages));
+//     }
+// }, []);
+
+// useEffect(() => {
+//     // localStorage.setItem('excelData', JSON.stringify(data));
+//     localStorage.setItem('profileImages', JSON.stringify(profileImages));
+// }, [data, profileImages]);
+//   const validate = () => {
+//     const newErrors = {};
+
+//     if (!name) newErrors.name = "Name is required.";
+//     if (!email) {
+//       newErrors.email = "Email is required.";
+//     } else if (!/\S+@\S+\.\S+/.test(email)) {
+//       newErrors.email = "Email is invalid.";
+//     }
+//     if (!mobile) {
+//       newErrors.mobile = "Mobile number is required.";
+//     } else if (!/^[6-9]\d{9}$/.test(mobile)) {
+//       newErrors.mobile = "Mobile number is invalid.";
+//     }
+//     if (!gender) newErrors.gender = "Gender is required.";
+//     if (!dob) newErrors.dob = "Date of Birth is required.";
+//     if (!age) {
+//       newErrors.age = "Age is required.";
+//     } else if (age < 18) {
+//       newErrors.age = "Driver must be at least 18 years old.";
+//     }
+//     if (!address) newErrors.address = "Address is required.";
+//     if (!aadhar) {
+//       newErrors.aadhar = "Aadhar number is required.";
+//     } else if (!/^\d{12}$/.test(aadhar)) {
+//       newErrors.aadhar = "Aadhar number is invalid.";
+//     }
+//     if (!pan) {
+//       newErrors.pan = "PAN card number is required."; //okasari pan ki validation remove chesey appudu try chey malli ok
+//     } else if (!/[A-Z]{5}[0-9]{2}/.test(pan)) {  //css poyindhi kadha
+//       newErrors.pan = "PAN card number is invalid.";//vachindhi  details kuda chudu 
+
+//     }
+//     if (!lic) {
+//       newErrors.lic = "License number is required.";
+//     } else if (!/^[0-9]{10}$/.test(lic)) {
+//       newErrors.lic = "License number is invalid.";
+//     }
+
+//     setErrors(newErrors);
+//     return Object.keys(newErrors).length === 0;
+//   };
+//   const handleProfileImageChange = async (event, rowIndex) => {
+//     const file = event.target.files[0];
+//     if (file && (file.type === 'image/jpeg' || file.type === 'image/png')) {
+//         try {
+            
+//             const formData = new FormData();
+//             formData.append('file', file);
+//             formData.append('upload_preset', 'q6fwknmo'); // Replace with your Cloudinary upload preset
+
+//             const response = await axios.post(
+//                 'https://api.cloudinary.com/v1_1/djbz2ydtp/image/upload', // Replace with your Cloudinary upload URL
+//                 formData
+//             );
+
+//             // Get the image URL from the response
+//             const imageUrl = response.data.secure_url;
+
+//             setImageUrl(imageUrl)
+
+//             // Update the profile image state with the Cloudinary URL
+//             setProfileImages(prevImages => ({ ...prevImages, [rowIndex]: imageUrl }));
+//         } catch (error) {
+//             console.error('Error uploading image:', error);
+//         }
+//     } else {
+//         alert('Please upload a valid image file (JPG or PNG).');
+//     }
+// };
+// const navigate = useNavigate();
+//   const handleSubmit = () => {
+
+//    let  driverId = generateRandomId()
+//    console.log(driverId)
+
+//     if (validate()) {
+//       console.log({
+//         driverId,
+//         name,
+//         mobile,
+//         email,
+//         gender,
+//         age,
+//         dob,
+//         address,
+//         aadhar,
+//         pan,
+//         lic,
+//         exp,
+//         imageUrl,
+//         vehicleId
+//       });
+//       navigate("/viewdrivers", {
+//         state: {
+//           name,
+//           mobile,
+//           email,
+//           gender,
+//           age,
+//           dob,
+//           address,
+//           aadhar,
+//           pan,
+//           lic
+//         }
+//       });
+
+//       axios.post("https://silent-wave-76445.pktriot.net/addDriver",{driverId,name,mobile,email,gender,age,dob,address,aadhar,pan,lic,exp,imageUrl,vehicleId})
+//       .then((result) => {
+//         console.log(result.data);
+//       })
+//       .catch((error) => {
+//         console.error(error);
+//       })
+
+//     }
+//   };
+//   // const location = useLocation();
+//   return (
+//     <div className="driver-form-details-m">
+//       <label className="l-namem">Name</label>
+//       <input
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//         className="dr-namem"
+//         type="text"
+//       />
+//       {errors.name && <p className="error">{errors.name}</p>}
+//       <br />
+
+//       <label className="l-emailm">E-mail</label>
+//       <input
+//         value={email}
+//         onChange={(e) => setEmail(e.target.value)}
+//         className="dr-emailm"
+//         type="text"
+//       />
+//       {errors.email && <p className="error">{errors.email}</p>}
+//       <br />
+
+//       <label className="l-mobm">Mobile Number</label>
+//       <input
+//         value={mobile}
+//         onChange={(e) => setMobile(e.target.value)}
+//         className="dr-mobm"
+//         type="number"
+//       />
+//       {errors.mobile && <p className="error">{errors.mobile}</p>}
+//       <br />
+
+//       <label className="l-genm">Gender</label>
+//       <select
+//         value={gender}
+//         onChange={(e) => setGender(e.target.value)}
+//         className="dr-genm"
+//       >
+//         <option value="">Select Gender</option>
+//         <option value="Male">Male</option>
+//         <option value="Female">Female</option>
+//       </select>
+//       {errors.gender && <p className="error">{errors.gender}</p>}
+//       <br />
+
+//       <label className="l-dobm">DOB</label>
+//       <input
+//         value={dob}
+//         onChange={(e) => setDob(e.target.value)}
+//         className="dr-dobm"
+//         type="date"
+//       />
+//       {errors.dob && <p className="error">{errors.dob}</p>}
+//       <br />
+
+//       <label className="l-agem">Age</label>
+//       <input
+//         value={age}
+//         onChange={(e) => setAge(e.target.value)}
+//         className="dr-agem"
+//         type="number"
+//       />
+//       {errors.age && <p className="error">{errors.age}</p>}
+//       <br />
+
+//       <label className="l-addressm">Address</label>
+//       <input
+//         value={address}
+//         onChange={(e) => setAddress(e.target.value)}
+//         className="dr-addressm"
+//         type="text"
+//       />
+//       {errors.address && <p className="error">{errors.address}</p>}
+//       <br />
+
+//       <label className="l-licm">LIC.No</label>
+//       <input
+//         value={lic}
+//         onChange={(e) => setLic(e.target.value)}
+//         className="dr-licm"
+//         type="text"
+//       />
+//       {errors.lic && <p className="error">{errors.lic}</p>}
+//       <br />
+
+//       <label className="l-panm">PAN Card No</label>
+//       <input
+//         value={pan}
+//         onChange={(e) => setPan(e.target.value)}
+//         className="dr-panm"
+//         type="text"
+//       />
+//       {errors.pan && <p className="error">{errors.pan}</p>}
+//       <br />
+
+//       <label className="l-aadharm">Aadhar No</label>
+//       <input
+//         type="text"
+//         value={aadhar}
+//         onChange={(e) => setAadhar(e.target.value)}
+//         className="dr-aadharm"
+//       />
+//       {errors.aadhar && <p className="error">{errors.aadhar}</p>}
+//       <br />
+
+//       <label className="l-expm">Experience</label>
+//       <input className="dr-expm" type="number" onChange={(e) => setExp(e.target.value)}/>
+//       <br />
+
+//       <label className="l-expm">Vehicle Id</label>
+//       <input className="dr-expm" type="text" onChange={(e) => setVehicleId(e.target.value)}/>
+//       <br />
+
+//       <label className="l-img">Image</label>
+//       <input  className="dr-img" type="file" accept='.jpg, .jpeg, .png' onChange={(e) => {handleProfileImageChange (e, data.length);}} />
+//       {imageUrl && <img src={imageUrl} alt="Uploaded" />}
+
+//       <br />
+  
+
+//       <button onClick={()=>handleSubmit()} className="dr-submit" >
+//         Submit
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default Newdriver;
 // import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 // import "./driver.css"
@@ -74,15 +442,16 @@ import "./newdriver.css";
 
 // import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import "./driver.css";
+import "./newdriver.css";
 import axios from 'axios';
 import { useEffect } from "react";
->>>>>>> bcc809310cb52c4b3910d1cb9880eff1a37d0f99
+import  {useNavigate} from "react-router-dom";
+
 
 function Newdriver() {
   // const navigate = useNavigate();
 
-  // State variables for form fields
+  // State variables for form fields and errors
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
@@ -93,31 +462,15 @@ function Newdriver() {
   const [aadhar, setAadhar] = useState("");
   const [pan, setPan] = useState("");
   const [lic, setLic] = useState("");
-<<<<<<< HEAD
-=======
   const [exp, setExp] = useState("");
   const [vehicleId , setVehicleId] = useState("")
 
-
   const [data, setData] = useState([]); 
->>>>>>> bcc809310cb52c4b3910d1cb9880eff1a37d0f99
   const [profileImages, setProfileImages] = useState({});
-  const [imageUrl, setImageUrl] = useState(""); // State to store the Cloudinary URL
+  // State variables for error messages
+  const [errors, setErrors] = useState({});
+  const [imageUrl, setImageUrl] = useState('');
 
-<<<<<<< HEAD
-  // Fetch data from local storage
-  useEffect(() => {
-    const savedImages = localStorage.getItem("profileImages");
-    if (savedImages) {
-      setProfileImages(JSON.parse(savedImages));
-    }
-  }, []);
-
-  // Save data to local storage
-  useEffect(() => {
-    localStorage.setItem("profileImages", JSON.stringify(profileImages));
-  }, [profileImages]);
-=======
   const generateRandomId = (length = 8) => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
@@ -127,84 +480,83 @@ function Newdriver() {
     return result;
   };
 
->>>>>>> bcc809310cb52c4b3910d1cb9880eff1a37d0f99
 
   // Validation function
-  const validate = () => {
-    const errors = [];
+  useEffect(() => {
+    // const savedData = localStorage.getItem('excelData');
+    const savedImages = localStorage.getItem('profileImages');
+    // if (savedData) {
+    //     const parsedData = JSON.parse(savedData);
+    //     setData(parsedData);
+    //     setFilteredData(parsedData);
+    // }
+    if (savedImages) {
+        setProfileImages(JSON.parse(savedImages));
+    }
+}, []);
 
-    if (!name) errors.push("Name is required.");
+useEffect(() => {
+    // localStorage.setItem('excelData', JSON.stringify(data));
+    localStorage.setItem('profileImages', JSON.stringify(profileImages));
+}, [data, profileImages]);
+  const validate = () => {
+    const newErrors = {};
+
+    if (!name) newErrors.name = "Name is required.";
     if (!email) {
-      errors.push("Email is required.");
+      newErrors.email = "Email is required.";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors.push("Email is invalid.");
+      newErrors.email = "Email is invalid.";
     }
     if (!mobile) {
-      errors.push("Mobile number is required.");
+      newErrors.mobile = "Mobile number is required.";
     } else if (!/^[6-9]\d{9}$/.test(mobile)) {
-      errors.push("Mobile number is invalid.");
+      newErrors.mobile = "Mobile number is invalid.";
     }
-    if (!gender) errors.push("Gender is required.");
-    if (!dob) errors.push("Date of Birth is required.");
+    if (!gender) newErrors.gender = "Gender is required.";
+    if (!dob) newErrors.dob = "Date of Birth is required.";
     if (!age) {
-      errors.push("Age is required.");
+      newErrors.age = "Age is required.";
     } else if (age < 18) {
-      errors.push("Driver must be at least 18 years old.");
+      newErrors.age = "Driver must be at least 18 years old.";
     }
-    if (!address) errors.push("Address is required.");
+    if (!address) newErrors.address = "Address is required.";
     if (!aadhar) {
-      errors.push("Aadhar number is required.");
+      newErrors.aadhar = "Aadhar number is required.";
     } else if (!/^\d{12}$/.test(aadhar)) {
-      errors.push("Aadhar number is invalid.");
+      newErrors.aadhar = "Aadhar number is invalid.";
     }
     if (!pan) {
-      errors.push("PAN card number is required.");
+      newErrors.pan = "PAN card number is required.";
     } else if (!/[A-Z]{5}[0-9]{4}[A-Z]{1}/.test(pan)) {
-      errors.push("PAN card number is invalid.");
+      newErrors.pan = "PAN card number is invalid.";
     }
     if (!lic) {
-      errors.push("License number is required.");
+      newErrors.lic = "License number is required.";
     } else if (!/^[0-9]{10}$/.test(lic)) {
-      errors.push("License number is invalid.");
+      newErrors.lic = "License number is invalid.";
     }
 
-    if (errors.length > 0) {
-      window.alert(errors.join("\n"));
-      return false;
-    }
-
-    return true;
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
-
   const handleProfileImageChange = async (event, rowIndex) => {
     const file = event.target.files[0];
-    if (file && (file.type === "image/jpeg" || file.type === "image/png")) {
-      try {
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("upload_preset", "shinyyyyy"); // Replace with your Cloudinary upload preset
+    if (file && (file.type === 'image/jpeg' || file.type === 'image/png')) {
+        try {
+            
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('upload_preset', 'q6fwknmo'); // Replace with your Cloudinary upload preset
 
-        const response = await axios.post(
-          "https://api.cloudinary.com/v1_1/dyxhiuuxa/image/upload", // Replace with your Cloudinary upload URL
-          formData
-        );
+            const response = await axios.post(
+                'https://api.cloudinary.com/v1_1/djbz2ydtp/image/upload', // Replace with your Cloudinary upload URL
+                formData
+            );
 
-        // Get the image URL from the response
-        const imageUrl = response.data.secure_url;
+            // Get the image URL from the response
+            const imageUrl = response.data.secure_url;
 
-<<<<<<< HEAD
-        // Update the profile image state with the Cloudinary URL
-        setProfileImages((prevImages) => ({
-          ...prevImages,
-          [rowIndex]: imageUrl,
-        }));
-
-        // Update the imageUrl state to display it
-        setImageUrl(imageUrl);
-      } catch (error) {
-        console.error("Error uploading image:", error);
-      }
-=======
             setImageUrl(imageUrl)
 
             // Update the profile image state with the Cloudinary URL
@@ -212,12 +564,11 @@ function Newdriver() {
         } catch (error) {
             console.error('Error uploading image:', error);
         }
->>>>>>> bcc809310cb52c4b3910d1cb9880eff1a37d0f99
     } else {
-      alert("Please upload a valid image file (JPG or PNG).");
+        alert('Please upload a valid image file (JPG or PNG).');
     }
-  };
-
+};
+  const navigate = useNavigate();
   const handleSubmit = () => {
 
    let  driverId = generateRandomId()
@@ -236,7 +587,9 @@ function Newdriver() {
         aadhar,
         pan,
         lic,
-<<<<<<< HEAD
+        exp,
+        imageUrl,
+        vehicleId
       });
       navigate("/viewdrivers", {
         state: {
@@ -249,28 +602,9 @@ function Newdriver() {
           address,
           aadhar,
           pan,
-          lic,
-        },
-=======
-        exp,
-        imageUrl,
-        vehicleId
->>>>>>> bcc809310cb52c4b3910d1cb9880eff1a37d0f99
+          lic
+        }
       });
-      // navigate("/viewdrivers", {
-      //   state: {
-      //     name,
-      //     mobile,
-      //     email,
-      //     gender,
-      //     age,
-      //     dob,
-      //     address,
-      //     aadhar,
-      //     pan,
-      //     lic
-      //   }
-      // });
 
       axios.post("https://silent-wave-76445.pktriot.net/addDriver",{driverId,name,mobile,email,gender,age,dob,address,aadhar,pan,lic,exp,imageUrl,vehicleId})
       .then((result) => {
@@ -282,7 +616,7 @@ function Newdriver() {
 
     }
   };
-
+  // const location = useLocation();
   return (
     <div className="driver-form-details-m">
       <label className="l-namem">Name</label>
@@ -292,6 +626,7 @@ function Newdriver() {
         className="dr-namem"
         type="text"
       />
+      {errors.name && <p className="error">{errors.name}</p>}
       <br />
 
       <label className="l-emailm">E-mail</label>
@@ -301,6 +636,7 @@ function Newdriver() {
         className="dr-emailm"
         type="text"
       />
+      {errors.email && <p className="error">{errors.email}</p>}
       <br />
 
       <label className="l-mobm">Mobile Number</label>
@@ -310,18 +646,20 @@ function Newdriver() {
         className="dr-mobm"
         type="number"
       />
+      {errors.mobile && <p className="error">{errors.mobile}</p>}
       <br />
 
       <label className="l-genm">Gender</label>
       <select
         value={gender}
         onChange={(e) => setGender(e.target.value)}
-        className="dr-gemn"
+        className="dr-genm"
       >
         <option value="">Select Gender</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
       </select>
+      {errors.gender && <p className="error">{errors.gender}</p>}
       <br />
 
       <label className="l-dobm">DOB</label>
@@ -331,6 +669,7 @@ function Newdriver() {
         className="dr-dobm"
         type="date"
       />
+      {errors.dob && <p className="error">{errors.dob}</p>}
       <br />
 
       <label className="l-agem">Age</label>
@@ -340,6 +679,7 @@ function Newdriver() {
         className="dr-agem"
         type="number"
       />
+      {errors.age && <p className="error">{errors.age}</p>}
       <br />
 
       <label className="l-addressm">Address</label>
@@ -349,6 +689,7 @@ function Newdriver() {
         className="dr-addressm"
         type="text"
       />
+      {errors.address && <p className="error">{errors.address}</p>}
       <br />
 
       <label className="l-licm">LIC.No</label>
@@ -358,6 +699,7 @@ function Newdriver() {
         className="dr-licm"
         type="text"
       />
+      {errors.lic && <p className="error">{errors.lic}</p>}
       <br />
 
       <label className="l-panm">PAN Card No</label>
@@ -367,6 +709,7 @@ function Newdriver() {
         className="dr-panm"
         type="text"
       />
+      {errors.pan && <p className="error">{errors.pan}</p>}
       <br />
 
       <label className="l-aadharm">Aadhar No</label>
@@ -376,43 +719,25 @@ function Newdriver() {
         onChange={(e) => setAadhar(e.target.value)}
         className="dr-aadharm"
       />
+      {errors.aadhar && <p className="error">{errors.aadhar}</p>}
       <br />
 
-<<<<<<< HEAD
       <label className="l-expm">Experience</label>
-      <input className="dr-expm" type="number" />
-=======
-      <label className="l-exp">Experience</label>
-      <input className="dr-exp" type="number" onChange={(e) => setExp(e.target.value)}/>
+      <input className="dr-expm" type="number" onChange={(e) => setExp(e.target.value)}/>
       <br />
 
-      <label className="l-exp">Vehicle Id</label>
-      <input className="dr-exp" type="text" onChange={(e) => setVehicleId(e.target.value)}/>
->>>>>>> bcc809310cb52c4b3910d1cb9880eff1a37d0f99
+      <label className="l-expm">Vehicle Id</label>
+      <input className="dr-expm" type="text" onChange={(e) => setVehicleId(e.target.value)}/>
       <br />
 
       <label className="l-imgm">Image</label>
-      <input
-        className="dr-imgm"
-        type="file"
-        accept=".jpg, .jpeg, .png"
-        onChange={(e) => handleProfileImageChange(e, 0)}
-      />
+      <input  className="dr-imgm" type="file" accept='.jpg, .jpeg, .png' onChange={(e) => {handleProfileImageChange (e, data.length);}} />
+      {imageUrl && <img src={imageUrl} alt="Uploaded" />}
+
       <br />
   
 
-      {/* Display the Cloudinary image URL */}
-      {imageUrl && (
-        <div>
-          <p>Uploaded Image URL:</p>
-          <a href={imageUrl} target="_blank" rel="noopener noreferrer">
-            {imageUrl}
-          </a>
-          <img src={imageUrl} alt="Uploaded" style={{ width: "100px", marginTop: "10px" }} />
-        </div>
-      )}
-
-      <button onClick={handleSubmit} className="dr-submitm">
+      <button onClick={()=>handleSubmit()} className="dr-submit" >
         Submit
       </button>
     </div>
@@ -420,3 +745,4 @@ function Newdriver() {
 }
 
 export default Newdriver;
+

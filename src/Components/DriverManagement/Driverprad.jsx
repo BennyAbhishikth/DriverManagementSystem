@@ -1,10 +1,9 @@
+
 import "./driver.css"
 import { IoCall } from "react-icons/io5";
-import { MdAirlineSeatReclineExtra } from "react-icons/md";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { FaChevronLeft } from "react-icons/fa6";
-import { MdOutlineLocalTaxi } from "react-icons/md";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
@@ -12,7 +11,6 @@ import { MdOutlineMessage } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { TiTick } from "react-icons/ti";
-import { LuFuel } from "react-icons/lu";
 import { FaStar } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { TiUser } from "react-icons/ti";
@@ -23,9 +21,6 @@ import { CiCalendarDate } from "react-icons/ci";
 import { FaAddressCard } from "react-icons/fa";
 import { PiClockAfternoon } from "react-icons/pi";
 import { FaLocationDot } from "react-icons/fa6";
-import { CiCalendar } from "react-icons/ci";
-import { FaBrush } from "react-icons/fa";
-
 import { useLocation, useNavigate } from "react-router-dom";
 
 import axios from "axios";
@@ -105,7 +100,7 @@ function Driverprad(){
     const handlebackdrpro=()=>{
        navigate("/viewdrivers")
     }
-   
+    
      const fun=[
         {title:"Phone Number",
          value: driverData.mobile,
@@ -144,7 +139,20 @@ function Driverprad(){
             icon:<FaAddressCard />
            },
     ]
-    
+    // const vehinf=[
+    //     {
+    //         Brand:"",
+    //         Model:"",
+    //         VehicleType:"",
+    //         Regno:"",
+    //         Color:"",
+    //         Seatcap:"",
+    //         Fueltype:"",
+    //         Mileagerange:"",
+    //         ManufacturedYear:""
+    //     }
+    // ]
+    // const location = useLocation();
    
  return(
     <div>
@@ -155,7 +163,7 @@ function Driverprad(){
             </div>
             <div className="admin-prof">
             <h3 >AdminName</h3>
-            <img className="admin-prof-btn" alt=""/>
+            <button className="admin-prof-btn"></button>
             </div>
         </div>
         <div className="tot-card">
@@ -164,16 +172,15 @@ function Driverprad(){
             <TiTick className="tick"  />
             <h4 className="doc-up" >All Documents are upto date</h4>
             </div>
-            {/* <select className="act-inact"> */}
-                <option className="act-inact">Active</option>
-                
-                {/* </select> */}
-
+            <div className="act-inact">
+                <option>Active</option>
+                {/* <option>InActive</option> */}
+                </div>
                 <button className="edit-btn"><MdOutlineEdit /></button>
                 <button className="delete-btn"><MdDelete /></button>
-                <img className="driver-image" src={driverData.imageUrl} alt="l" style={{width : "100px", height : "100px" , borderRadius : "50%"}}/>
-                <h4 className="driver-name-head">Driver Name : {driverData.name}</h4>
-                <h5 className="driver-id">Driver Id : {driverId}</h5>
+                <img className="driver-image" src={driverData.imageUrl} alt="l" style={{width : "70px", height : "70px" , borderRadius : "50%"}}/>
+                <h4 className="driver-name-head">{driverData.name}</h4>
+                <h5 className="driver-id">{driverId}</h5>
                 <p className="last-update-h">Last Update on Date</p>
                 <h5 className="rating-dr">4.5<FaStar className="star" /></h5>
                 <button className="caller-btn"><IoCallOutline /></button>
@@ -189,8 +196,8 @@ function Driverprad(){
                 <div className="dr-detail-cards">
                     {drdetails.map((item,key)=>(
                         <li className="dr-details-card" key={key}>
-                            <h5>{item.title}</h5>
-                            <h6>{item.val}</h6>
+                            <h5 >{item.val}</h5>
+                            <h5 >{item.title}</h5>
                         </li>
                     ))}
                 </div>
@@ -205,7 +212,7 @@ function Driverprad(){
             {viewPersonalDetails&&(
         <div className="information">
                  <div className="inf-pers">
-                 <h4 className="inf-pers-view"><u>Personal Information</u></h4>
+                 <h4><u>Personal Information</u></h4>
                  <h3><TiUser />&nbsp;&nbsp;Driver Name</h3>
                  <div className="mob-infss">
                  {fun.map((item,key)=>(
@@ -214,10 +221,9 @@ function Driverprad(){
                         <div className="mob-symm">
                           <button className="mob-sym-btn"><icon />{item.icon}</button>
                         </div>
-                        <div className="details-driver-card">
-                           <p className="phone-num-h">{item.title}</p>
-                           <p className="phone-num"><b>{item.value}</b></p>
-                           </div>
+                        <div className="mob-inf-det">
+                           <p className="phone-num-h"><b>{item.title}</b></p>
+                           <p className="phone-num">{item.value}</p>
                         </div>
                     </div>
                  ))}
@@ -239,7 +245,7 @@ function Driverprad(){
                     </div>
                )}     
         <div className="curr-ass-veh">
-            <h4 className="inf-pers-view-veh"><u>Currently Assigned Vehicle</u></h4>
+            <h4><u>Currently Assigned Vehicle</u></h4>
             <div className="cur-det">
                 <div className="cur-car-det-c">
                 <img className="cur-car-img" src={driverData.vehicleImage} alt="ff"/>
@@ -248,62 +254,46 @@ function Driverprad(){
                     <div className="brand-img-mo-num">
                 <img className="vehicle-brande-img" src="https://res.cloudinary.com/dyxhiuuxa/image/upload/v1724700248/Maruti-Suzuki-Logo-2011_oxddax.png" alt="id"/>
                 <h3 className="veh-num-cras">{driverData.registrationNumber}</h3>
-                <h5 className="veh-model">Swift VXI</h5>
+                <h5 className="veh-model">{driverData.vehicleName}</h5>
                 </div>
-                <p className="view-veh-detail-cras">View Vehicle details <FaAngleRight className="right-det" /> </p>
-                <h5 className="assg-client">Assigned Client</h5>
-                <h3 className="assg-client-name">Client Name</h3>
-                <p className="assg-client-chng">Change Client<FaAngleRight className="right-det" /></p>
-                <h5 className="assg-loc">Assigned Location</h5>
-                <h3 className="assg-route">NPT-HCL</h3>
-                <p className="assg-loc-chng">Change Location<FaAngleRight className="right-det" /></p>
+                {/* <p className="view-veh-detail-cras">View Vehicle details <FaAngleRight className="right-det" /> </p> */}
+                {/* <h5 className="assg-client">Assigned Client</h5> */}
+                {/* <h3 className="assg-client-name">Client Name</h3> */}
+                {/* <p className="assg-client-chng">Change Client<FaAngleRight className="right-det" /></p> */}
+                {/* <h5 className="assg-loc">Assigned Location</h5> */}
+                {/* <h3 className="assg-route">NPT-HCL</h3> */}
+                {/* <p className="assg-loc-chng">Change Location<FaAngleRight className="right-det" /></p> */}
                 
                 <div className="curr-dets">
-                    <div className="brand">
+                    {/* <div className="brand">
                     <p >Brand</p>
                     <p>value</p>
-                </div>
+                </div> */}
          <div className="model"> 
-            <p >Model</p>
+            <p ><b>Model</b></p>
             <p>{driverData.vehicleName}</p>
             </div>
-            <div className="color">
-            <div>
-                       <button className="car-brand-btn"><FaBrush  /></button> 
-                        </div>
-                        <div>
-                        <p>Color</p>
-                        <p>value</p>
-                        </div>
-                        
-            </div>
+            {/* <div className="color"><p>Color</p>
+            <p>value</p>
+            </div> */}
             <div className="regno">
-            <p >Registration Num</p>
+            <p ><b>Registration Num</b></p>
             <p>{driverData.registrationNumber}</p>
             </div>
-
             <div className="seatcp">
-            <div>
-                       <button className="car-brand-btn"><MdAirlineSeatReclineExtra  /></button> 
-                        </div>
-            <div>
-            <p>Seat Capacity</p>
+            <p><b>Seat Capacity</b></p>
             <p>{driverData.seatCapacity}</p>
             </div>
             <div className="fueltype">
-            <p>Fuel Type</p>
+            <p><b>Fuel Type</b></p>
             <p>{driverData.fuelType}</p>
             </div>
             <div className="mil">
-            <div>
-                       <button className="car-brand-btn"><MdOutlineLocalTaxi  /></button> 
-                        </div>
-            <div>
-            <p >Mileage</p>
+            <p ><b>Mileage</b></p>
             <p>{driverData.mileage}</p>
             </div>
             <div className="man-year">
-            <p>Manufacture Year</p>
+            <p><b>Manufacture Year</b></p>
             <p>{driverData.yearOfManufacturing}</p>
             </div>
             </div>

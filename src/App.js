@@ -10,6 +10,7 @@ import PaymentPage from './Components/DriverManagement/Paythrough';
 import UploadExcel from './Components/Employee/Employeedata';
 import Upload from './Components/Employee/Vennela';
 import VehicleForm from './Components/Employee/Vennela';
+import Form from './Components/Employee/Form';
 function App() {
   return (
     
@@ -25,6 +26,7 @@ function App() {
       <Route path='/viewinvoice' element={<Invoice />} />
       <Route path='/paythroughh' element={<PaymentPage />} />
       <Route path='/vennela' element={<VehicleForm />}/>
+      <Route path="/form" element={<Form />}/>
     </Routes>
     </BrowserRouter>
       

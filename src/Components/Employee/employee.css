@@ -170,10 +170,10 @@ table {
     margin-left: 12vw;
     border-radius: 10px;
   } */
-  .close-form-btn{
-    margin-left: 73vw;
-    margin-top: 1.5vh;
-  }
+  /* .close-form-btn{
+    /* margin-left: 60vw;
+    margin-top: 1.5vh; */
+  /* } */ */
   /* .add-employee-input{
     height: 4vh;
     width: 10vw;
@@ -203,7 +203,131 @@ table {
  /* .add-employee-head{
   margin-left: 2vw;
  } */
- .popup-overlay {
+ /* .popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* justify-content: center;
+  align-items: center; */
+  /* height: 50vh; */
+  /* z-index: 1000; */
+  /* width: 50vw; */
+  /* height: 70vh; */
+/* } */ */
+
+/* Popup form styles */
+/* .add-employee-form {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  /* position: relative; */
+  /* margin-top: 5vh; */
+  /* width: 48vw;
+  height: 95vh;
+  display: flex; */
+  /* flex-wrap: wrap; */
+  /* display: flex; */
+  /* max-width: 500px; */
+/* } */ */
+
+
+.data-preview thead{
+  position:sticky
+}
+/* .close-form-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+} */
+
+/* .add-employee-head {
+  margin-top: 0;
+}
+
+.add-employee-input {
+  display: block;
+ 
+  width: 12vw;
+  height: 4vh;
+  margin: 15px;
+  /* padding: 8px; */
+  /* border-radius: 4px;
+  border: 1px solid #ddd;
+}  */
+
+/* .add-employee-save-btn, .add-employee-cancel-btn {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* gap: 3rem; */
+/* } */ 
+
+/* .add-employee-save-btn {
+  background-color: #4CAF50;
+  color: white;
+  height: 4vh;
+  /* margin-left: 10vw; */
+  /* align-items: center; */
+  /* text-align: center;
+} */
+.add-employee-form {
+  box-shadow: 1px 1px 1px 1px rgb(229, 227, 227);
+  width: 70vw;
+  margin-left: 15vw;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line if necessary */
+  gap: 10px; /* Adds space between the fields */
+}
+
+.add-employee-input {
+  width: calc(50% - 20px); /* Adjust width for side-by-side layout with gap */
+  height: 30px; /* Adjust height for consistency */
+  border-radius: 4px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.add-employee-input.full-width {
+  width: 100%;
+}
+
+.add-employee-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: px;
+}
+
+.add-employee-save-btn, .add-employee-cancel-btn {
+  height: 40px;
+  width: 100px;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.add-employee-save-btn {
+  background-color: green;
+}
+
+.add-employee-cancel-btn {
+  background-color: red;
+}
+
+.popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -214,53 +338,4 @@ table {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-}
-
-/* Popup form styles */
-.add-employee-form {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  position: relative;
-  width: 80%;
-  max-width: 500px;
-}
-
-.close-form-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.add-employee-head {
-  margin-top: 0;
-}
-
-.add-employee-input {
-  display: block;
-  width: calc(100% - 20px);
-  margin: 10px 0;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-
-.add-employee-save-btn, .add-employee-cancel-btn {
-  margin: 10px 5px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.add-employee-save-btn {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.add-employee-cancel-btn {
-  background-color: #f44336;
-  color: white;
 }
